@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lebenspass Privacy Policy">
+    <meta name="author" content="Umair Sarfraz">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Datenschutzerklärung - Lebenspass</title>
+
+    <style>
+        @font-face {
+            font-family: 'DM Sans';
+            src: url('assets/fonts/static/DMSans-Regular.ttf') format('truetype'),
+                url('assets/fonts/static/DMSans-Italic-Variable.ttf') format('truetype'),
+                url('assets/fonts/static/DMSans-Variable.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-image: url('assets/images/background-gradient.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .text {
+            color: #000;
+        }
+
+        .section-title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .policy-text {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 10;
+        }
+
+        .language-switcher button {
+            background: none;
+            border: none;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .language-switcher .active {
+            text-decoration: underline;
+        }
+
+        #page-title {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <!-- Language switcher -->
+    <div class="language-switcher">
+        <button id="btn-de" class="active">DE</button> | <button id="btn-en">EN</button>
+    </div>
+
+    <main class="container py-5">
+        <h1 class="text mb-4" id="page-title"></h1>
+
+        <div class="p-4 rounded shadow-sm">
+            <p class="policy-text" id="intro-text"></p>
+
+            <h2 class="section-title" id="section-1-title"></h2>
+            <p class="policy-text" id="section-1-text"></p>
+
+            <h2 class="section-title" id="section-2-title"></h2>
+            <p class="policy-text" id="section-2-text"></p>
+
+            <h2 class="section-title" id="section-3-title"></h2>
+            <p class="policy-text" id="section-3-text"></p>
+
+            <h2 class="section-title" id="section-4-title"></h2>
+            <p class="policy-text" id="section-4-text"></p>
+
+            <h2 class="section-title" id="section-5-title"></h2>
+            <p class="policy-text" id="section-5-text"></p>
+
+            <h2 class="section-title" id="section-6-title"></h2>
+            <p class="policy-text" id="section-6-text"></p>
+
+            <h2 class="section-title" id="section-7-title"></h2>
+            <p class="policy-text" id="section-7-text"></p>
+
+            <h2 class="section-title" id="section-8-title"></h2>
+            <p class="policy-text" id="section-8-text"></p>
+
+            <h2 class="section-title" id="section-9-title"></h2>
+            <p class="policy-text" id="section-9-text"></p>
+
+            <h2 class="section-title" id="section-10-title"></h2>
+            <p class="policy-text" id="section-10-text"></p>
+        </div>
+    </main>
+
+    <footer class="text-muted py-5" style="background-color: black;">
+        <div class="container text-white text-center">
+            <p>
+                <a href="/privacy-policy.html" class="text-white">Privacy Policy</a> |
+                <a href="mailto:lebenspass@protonmail.com" class="text-white">Contact Us</a>
+            </p>
+            <p>&copy; <span id="year"></span>Lebenspass. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const texts = {
+            de: {
+                pageTitle: "Datenschutzerklärung",
+                introText: `Lebenspass ("wir", "uns", "unser") respektiert Ihre Privatsphäre. Diese Datenschutzerklärung erklärt, wie wir Ihre Informationen bei der Nutzung unserer mobilen Anwendung ("die App") behandeln. Wir verpflichten uns, Ihre Privatsphäre zu schützen und transparent darüber zu informieren, wie wir Ihre Daten verwalten.`,
+                section1Title: "1. Informationen, die wir nicht sammeln",
+                section1Text: `Lebenspass sammelt keine persönlichen Informationen oder Daten von Ihnen. Wir fragen nicht nach, speichern oder verarbeiten keine persönlichen Details wie: <ul><li>Ihr Name</li><li>E-Mail-Adresse</li><li>Telefonnummer</li><li>Adresse</li><li>Standortdaten</li><li>Andere persönlich identifizierbare Informationen</li></ul><br>Da wir keine persönlichen Daten sammeln, können Sie die App sorgenfrei nutzen.`,
+                section2Title: "2. Werbung",
+                section2Text: `Lebenspass zeigt keine Werbung innerhalb der App. Wir arbeiten nicht mit Dritten zusammen, die Werbung schalten oder eine Form von Werbung anzeigen.`,
+                section3Title: "3. Links zu Dritten",
+                section3Text: `Obwohl die App Links zu Drittanbieter-Websites oder -Diensten enthalten kann, beachten Sie bitte, dass wir nicht für den Inhalt oder die Datenschutzpraktiken dieser externen Seiten verantwortlich sind.`,
+                section4Title: "4. Haftungsausschluss der Regierungsvertretung",
+                section4Text: `Lebenspass ist nicht mit einer Regierungsbehörde verbunden, unterstützt oder stellt diese in irgendeiner Weise dar. Alle regierungsbezogenen Inhalte in der App stammen aus öffentlich verfügbaren Informationen.`,
+                section5Title: "5. Änderungen dieser Datenschutzerklärung",
+                section5Text: `Wir können diese Datenschutzerklärung in der Zukunft aktualisieren. Alle Änderungen werden in der App veröffentlicht, und wir empfehlen, diese Datenschutzerklärung regelmäßig zu überprüfen.`,
+                section6Title: "6. Datennutzung und Einschränkungen",
+                section6Text: `Obwohl die App keine persönlichen Informationen sammelt, kann sie mit öffentlichen Daten interagieren. Wir verwenden diese Daten nur für die in dieser Richtlinie ausdrücklich genannten Zwecke.`,
+                section7Title: "7. Lokale Speicherung von Lesezeichen",
+                section7Text: `Lebenspass ermöglicht es Ihnen, Lesezeichen zu speichern und zu verwalten. Diese Lesezeichen werden lokal auf Ihrem Gerät gespeichert und nicht an ein externes Netzwerk oder einen Server übertragen.`,
+                section8Title: "8. Einhaltung der Entwicklerprogramm-Richtlinien",
+                section8Text: `Wir haben sichergestellt, dass die Lebenspass-App mit allen relevanten Richtlinien des Entwicklerprogramms übereinstimmt.`,
+                section9Title: "9. Kontaktieren Sie uns",
+                section9Text: `Wenn Sie Fragen oder Bedenken zu dieser Datenschutzerklärung haben, kontaktieren Sie uns unter: <a href="mailto:lebenspass@protonmail.com" style="font-weight: bold; text-decoration: underline;">lebenspass@protonmail.com</a>`,
+                section10Title: "10. Verfügbarkeit der Datenschutzerklärung",
+                section10Text: `Diese Datenschutzerklärung ist über eine gültige URL innerhalb der App und auf unserer Store-Listing-Seite verfügbar. Sie ist nicht bearbeitbar, um die Konsistenz und Sicherheit der bereitgestellten Informationen zu gewährleisten.`
+            },
+            en: {
+                pageTitle: "Privacy Policy",
+                introText: `At Lebenspass ("we," "our," "us"), we value your privacy. This Privacy Policy explains how we handle your information when you use our mobile application ("the App"). We are committed to protecting your privacy and being transparent about how we manage your data.`,
+                section1Title: "1. Information We Do Not Collect",
+                section1Text: `Lebenspass does not collect any personal information or data from you. We do not ask for, store, or process any personal details such as: <ul><li>Your name</li><li>Email address</li><li>Phone number</li><li>Physical address</li><li>Location data</li><li>Any other personally identifiable information</li></ul><br>Since we do not collect any personal information, you can use the App without worrying about your privacy being compromised.`,
+                section2Title: "2. Advertising",
+                section2Text: `Lebenspass does not display any ads within the App. We do not partner with any third-party advertising networks or display any form of advertising.`,
+                section3Title: "3. Third-Party Links",
+                section3Text: `While the App may contain links to third-party websites or services, please note that we are not responsible for the content or privacy practices of any external sites.`,
+                section4Title: "4. Government Representation Disclaimer",
+                section4Text: `Lebenspass is not affiliated with, endorsed by, or in any way representative of any government entity. The App does not provide official government information or services. Any government-related content in the App is sourced from publicly available information.`,
+                section5Title: "5. Changes to This Privacy Policy",
+                section5Text: `We may update our Privacy Policy in the future. Any changes will be posted within the App, and we encourage you to periodically review this Privacy Policy to stay informed about how we protect your privacy.`,
+                section6Title: "6. Data Usage and Limitations",
+                section6Text: `Although the App does not collect any personal information, it may interact with public data. We limit the use of any data accessed or displayed through the App to the purposes explicitly disclosed in this policy.`,
+                section7Title: "7. Local Storage of Bookmarks",
+                section7Text: `Lebenspass allows you to save and manage bookmark questions within the App. These questions are stored locally on your device in persistent storage and are not transmitted to any external network or server.`,
+                section8Title: "8. Compliance and Developer Program Guidelines",
+                section8Text: `We ensure that the Lebenspass app complies with all relevant developer program guidelines for privacy and user experience.`,
+                section9Title: "9. Contact Us",
+                section9Text: `If you have any questions or concerns regarding this Privacy Policy, you can contact us via email at: <a href="mailto:lebenspass@protonmail.com" style="font-weight: bold; text-decoration: underline;">lebenspass@protonmail.com</a>`,
+                section10Title: "10. Availability of Privacy Policy",
+                section10Text: `This Privacy Policy is available through a valid URL within the App and on our store listing page. It is not editable to ensure consistency and security of the information provided.`
+            }
+        };
+
+        function switchLanguage(language) {
+            const data = texts[language];
+
+            document.getElementById("page-title").textContent = data.pageTitle;
+            document.getElementById("intro-text").innerHTML = data.introText;
+            document.getElementById("section-1-title").textContent = data.section1Title;
+            document.getElementById("section-1-text").innerHTML = data.section1Text;
+            document.getElementById("section-2-title").textContent = data.section2Title;
+            document.getElementById("section-2-text").innerHTML = data.section2Text;
+            document.getElementById("section-3-title").textContent = data.section3Title;
+            document.getElementById("section-3-text").innerHTML = data.section3Text;
+            document.getElementById("section-4-title").textContent = data.section4Title;
+            document.getElementById("section-4-text").innerHTML = data.section4Text;
+            document.getElementById("section-5-title").textContent = data.section5Title;
+            document.getElementById("section-5-text").innerHTML = data.section5Text;
+            document.getElementById("section-6-title").textContent = data.section6Title;
+            document.getElementById("section-6-text").innerHTML = data.section6Text;
+            document.getElementById("section-7-title").textContent = data.section7Title;
+            document.getElementById("section-7-text").innerHTML = data.section7Text;
+            document.getElementById("section-8-title").textContent = data.section8Title;
+            document.getElementById("section-8-text").innerHTML = data.section8Text;
+            document.getElementById("section-9-title").textContent = data.section9Title;
+            document.getElementById("section-9-text").innerHTML = data.section9Text;
+            document.getElementById("section-10-title").textContent = data.section10Title;
+            document.getElementById("section-10-text").innerHTML = data.section10Text;
+        }
+
+        document.getElementById("btn-de").addEventListener("click", function () {
+            switchLanguage("de");
+            document.getElementById("btn-de").classList.add("active");
+            document.getElementById("btn-en").classList.remove("active");
+        });
+
+        document.getElementById("btn-en").addEventListener("click", function () {
+            switchLanguage("en");
+            document.getElementById("btn-en").classList.add("active");
+            document.getElementById("btn-de").classList.remove("active");
+        });
+
+        switchLanguage("de");
+
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

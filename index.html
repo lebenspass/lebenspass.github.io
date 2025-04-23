@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lebenspass">
+  <meta name="keywords" content="Lebenspass, Website, Einbürgerungstest">
+  <meta name="author" content="Umair Sarfraz">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+  <link rel="shortcut icon" href="assets/images/favicon/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Lebenspass</title>
+
+  <style>
+    @font-face {
+      font-family: 'DM Sans';
+      src: url('assets/fonts/static/DMSans-Regular.ttf') format('truetype'),
+        url('assets/fonts/static/DMSans-Italic-Variable.ttf') format('truetype'),
+        url('assets/fonts/static/DMSans-Variable.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-image: url('assets/images/background-gradient.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+    }
+
+    .language-switcher button {
+      background: none;
+      border: none;
+      font-weight: bold;
+      font-size: 1rem;
+      color: #000;
+      cursor: pointer;
+    }
+
+    .carousel-indicators button {
+      background-color: #333 !important;
+    }
+
+    .carousel-indicators .active {
+      background-color: #000 !important;
+    }
+
+    .language-switcher .active {
+      text-decoration: underline;
+    }
+
+    .heading {
+      color: #000;
+      font-weight: 700;
+    }
+
+    .text {
+      color: #000;
+      font-size: 18px;
+    }
+
+    .figure img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .figure {
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 576px) {
+      .figure img {
+        max-width: 70%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .carousel-caption h2 {
+        font-size: 1.2rem;
+      }
+
+      .carousel-caption p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-light" onload="setDefaultLanguage()">
+
+  <div class="language-switcher">
+    <button id="btn-de" class="active">DE</button> | <button id="btn-en">EN</button>
+  </div>
+
+  <main class="container">
+    <div class="d-flex p-3 text-white my-3 rounded">
+      <div class="row">
+        <figure class="figure col-lg-3">
+          <img src="assets/images/icon.png" class="figure-img img-fluid rounded">
+        </figure>
+
+        <div class="col-lg-9">
+          <h1 class="heading" id="title-text"></h1>
+
+          <p id="hero-text" class="lead text"></p>
+
+          <p>
+            <a href="https://apps.apple.com/in/app/lebenspass/id6670338575" target="_blank">
+              <img src="assets/images/app-store-ios.svg" width="35%" style="cursor: pointer;">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.lebenpass&pcampaignid=web_share" target="_blank">
+              <img src="assets/images/google-play-android.png" width="43%" style="cursor: pointer;">
+            </a>
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+    <div id="myCarousel" class="carousel slide my-3 rounded" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="transparent" />
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text">
+              <h2 id="carousel-1-title"></h2>
+              <p id="carousel-1-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item text">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="transparent" />
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text">
+              <h2 id="carousel-2-title"></h2>
+              <p id="carousel-2-text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item text">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="transparent" />
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text">
+              <h2 id="carousel-3-title"></h2>
+              <p id="carousel-3-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="my-3 p-3 rounded">
+      <div class="row align-items-center justify-content-center">
+        <figure class="figure col-6 col-md-3 mb-4">
+          <img src="assets/images/screenshot_1.png" class="figure-img img-fluid rounded shadow">
+        </figure>
+        <figure class="figure col-6 col-md-3 mb-4">
+          <img src="assets/images/screenshot_2.png" class="figure-img img-fluid rounded shadow">
+        </figure>
+        <figure class="figure col-6 col-md-3 mb-4">
+          <img src="assets/images/screenshot_3.png" class="figure-img img-fluid rounded shadow">
+        </figure>
+        <figure class="figure col-6 col-md-3 mb-4">
+          <img src="assets/images/screenshot_4.png" class="figure-img img-fluid rounded shadow">
+        </figure>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-muted py-5" style="background-color: black;">
+    <div class="container text-white text-center">
+      <p>
+        <a href="/privacy-policy.html" class="text-white" id="privacy-policy-text"></a> |
+        <a href="mailto:lebenspass@protonmail.com class=" text-white" id="contact-text"></a>
+      </p>
+      <p>&copy; <span id="year"></span>Lebenspass. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const texts = {
+      de: {
+        hero: `Lebenspass ist eine kostenlose, werbefreie App zur Vorbereitung auf den Einbürgerungstest („Leben in Deutschland”).
+            Sie enthält alle 310 offiziellen Fragen – 300 allgemeine und 10 bundeslandspezifische – mit Übersetzungen zur Unterstützung deines Lernens.
+            Übe mit Probetests, verfolge deinen Fortschritt und markiere schwierige Fragen – alles in einer klaren, intuitiven und benutzerfreundlichen Oberfläche.
+            <br><br>
+            Diese App ist eine unabhängige Ressource ohne Verbindung zu offiziellen Institutionen.
+            Offizielle Informationen findest du auf der
+            <a href="https://www.bamf.de/SharedDocs/Links/DE/O/oet-bamf-interaktiv_einbuergerungstest_fragenkatalog.html?nn=282388" target="_blank" rel="noopener noreferrer">BAMF-Website</a>.
+            <br><br>
+            Viel Erfolg beim Lernen!`,
+        title: "Lebenspass",
+        carousel1Title: "Schlank, Benutzerfreundlich",
+        carousel1Text: "Entwickelt, um dir zu helfen, schneller und intelligenter zu lernen, mit einer sauberen, intuitiven Oberfläche.",
+        carousel2Title: "Ohne Werbung",
+        carousel2Text: "Keine Werbung, keine Gebühren – einfach alles, was du brauchst, um dich mühelos auf den Test vorzubereiten.",
+        carousel3Title: "Testabdeckung",
+        carousel3Text: "Beinhaltet alle 310 offiziellen Fragen, Probetests und Werkzeuge zur Fortschrittsverfolgung.",
+        privacyPolicyText: "Datenschutzrichtlinie",
+        contactText: "Kontaktiere uns"
+      },
+      en: {
+        hero: `Lebenspass is a free, ad-free app to help you prepare for the Einbürgerungstest (German Naturalization Test).
+            It contains all 310 official questions – 300 general and 10 state-specific – with translations to support your learning.
+            Practice with mock tests, track your progress, and bookmark tricky questions – all in a clean, intuitive, and user-friendly experience.
+            <br><br>
+            This app is an independent resource with no affiliations to any official institutions.
+            For official information, visit the
+            <a href="https://www.bamf.de/SharedDocs/Links/DE/O/oet-bamf-interaktiv_einbuergerungstest_fragenkatalog.html?nn=282388" target="_blank" rel="noopener noreferrer">BAMF website</a>.
+            <br><br>
+            Good luck studying!`,
+        title: "Lebenspass",
+        carousel1Title: "Sleek, User-Friendly Experience",
+        carousel1Text: "Designed to help you study faster and smarter with a clean, intuitive interface.",
+        carousel2Title: "Ad-Free",
+        carousel2Text: "No ads, no fees—just everything you need to prepare for the test with ease.",
+        carousel3Title: "Test Coverage",
+        carousel3Text: "Includes all 310 official questions, mock exams, and progress tracking tools.",
+        privacyPolicyText: "Privacy Policy",
+        contactText: "Contact Us"
+      }
+    };
+
+    function setDefaultLanguage() {
+      const defaultLanguage = 'de';
+      updateLanguage(defaultLanguage);
+    }
+
+    function updateLanguage(language) {
+      document.getElementById('hero-text').innerHTML = texts[language].hero;
+      document.getElementById('title-text').innerHTML = texts[language].title;
+
+      document.getElementById('carousel-1-title').innerHTML = texts[language].carousel1Title;
+      document.getElementById('carousel-1-text').innerHTML = texts[language].carousel1Text;
+      document.getElementById('carousel-2-title').innerHTML = texts[language].carousel2Title;
+      document.getElementById('carousel-2-text').innerHTML = texts[language].carousel2Text;
+      document.getElementById('carousel-3-title').innerHTML = texts[language].carousel3Title;
+      document.getElementById('carousel-3-text').innerHTML = texts[language].carousel3Text;
+
+      document.getElementById('privacy-policy-text').innerHTML = texts[language].privacyPolicyText;
+      document.getElementById('contact-text').innerHTML = texts[language].contactText;
+
+      document.getElementById('btn-de').classList.toggle('active', language === 'de');
+      document.getElementById('btn-en').classList.toggle('active', language === 'en');
+    }
+
+    document.getElementById('btn-de').addEventListener('click', () => updateLanguage('de'));
+    document.getElementById('btn-en').addEventListener('click', () => updateLanguage('en'));
+  </script>
+
+</body>
+
+</html>
